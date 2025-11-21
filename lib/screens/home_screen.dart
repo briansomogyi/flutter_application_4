@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/data/css_colors.dart';
-import 'package:flutter_application_4/widgets/css_color_list_item.dart';
+
+import '../common/strings.dart' as strings;
+import '../data/css_colors.dart';
+import '../widgets/css_color_list_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Css Color Viewer'),
+        title: Text(strings.homeScreenTitle),
       ),
       body: ListView.builder(
         itemCount: cssColors.length,

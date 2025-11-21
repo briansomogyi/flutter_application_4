@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/screens/home_screen.dart';
+
+import 'common/strings.dart' as strings;
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(CssColorViewerApp());
@@ -11,7 +13,7 @@ class CssColorViewerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Css Color Viewer',
+      title: strings.appName,
       home: HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
