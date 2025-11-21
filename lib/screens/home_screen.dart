@@ -8,7 +8,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Css Color Viewer'),
+      ),
       body: ListView(
         children: [
           CssColorListItem(cssColor: cssColors[5]),

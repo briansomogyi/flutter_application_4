@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/models/css_color.dart';
+
+import '../models/css_color.dart';
+import '../utils/color_utils.dart';
 
 class CssColorListItem extends StatelessWidget {
   const CssColorListItem({super.key, required this.cssColor});
@@ -8,11 +10,13 @@ class CssColorListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(16.0),
       color: cssColor.color,
       child: Row(
+        mainAxisAlignment: .spaceBetween,
         children: [
           Text(cssColor.colorName),
-          Text(cssColor.color.toString()),
+          Text(toHex(cssColor.color)),
         ],
       ),
     );

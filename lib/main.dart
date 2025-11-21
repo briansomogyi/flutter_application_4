@@ -13,6 +13,7 @@ class CssColorViewerApp extends StatelessWidget {
     return MaterialApp(
       title: 'Css Color Viewer',
       home: HomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
