@@ -11,15 +11,11 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Css Color Viewer'),
       ),
-      body: ListView(
-        children: [
-          CssColorListItem(cssColor: cssColors[5]),
-          CssColorListItem(cssColor: cssColors[22]),
-          CssColorListItem(cssColor: cssColors[65]),
-          CssColorListItem(cssColor: cssColors[54]),
-          CssColorListItem(cssColor: cssColors[88]),
-          CssColorListItem(cssColor: cssColors[72]),
-        ],
+      body: ListView.builder(
+        itemCount: cssColors.length,
+        itemBuilder: (BuildContext context, int index) {
+          return CssColorListItem(cssColor: cssColors[index]);
+        },
       ),
     );
   }
